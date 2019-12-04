@@ -1,0 +1,11 @@
+# Don't check auto-generated stuff into git
+dist
+lib
+es
+node_modules
+.cache
+.idea
+.vscode
+*.log
+yarn.lock
+*.lock

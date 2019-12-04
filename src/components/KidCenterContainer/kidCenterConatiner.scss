@@ -1,0 +1,105 @@
+@import '../../base.scss';
+@import '../../svgcss/messagebg.scss';
+#centerContainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  // min-width: 1170px;
+  // min-height: 660px;
+  background: url($message-bg) center no-repeat;
+  background-size: cover;
+  @include FlexCol;
+  font-family: HYZhengYuan;
+  .header {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+  }
+  .body {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    @include FlexRow;
+    justify-content: center;
+    .container {
+      position: absolute;
+      bottom: 23px;
+      width: 808px;
+      top: 50%;
+      height: 492px;
+      background-color: #6D8FFF;
+      margin: -230px auto 0;
+      border-radius: 32px;
+      padding: 22px;
+      //border: solid 22px #6D8FFF;
+      .menu-bar {
+        position: absolute;
+        top: -37px;
+        left: 71px;
+        height: 37px;
+        display: flex;
+        .menu {
+          background: url("./image/me_tab_bg_normal@2x.png") center no-repeat;
+          background-size: cover;
+          width: 146px;
+          height: 37px;
+          text-align: center;
+          font-size: 16px;
+          color: #fff;
+          line-height: 45px;
+          @include HoverFinger;
+          &.active {
+            background: url("./image/me_tab_bg_select@2x.png") center no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+      .main {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: #466CE4;
+        border-radius: 32px;
+      }
+      .bg-line {
+        position: absolute;
+        width: 36px;
+        height: 18px;
+        z-index: 99;
+        &.wire1 {
+          background: url("./image/me_img_wire1@2x.png") center no-repeat;
+          background-size: cover;
+        }
+        &.wire2 {
+          background: url("./image/me_img_wire2@2x.png") center no-repeat;
+          background-size: cover;
+        }
+        &.left {
+          left: 7px;
+        }
+        &.right {
+          right: 7px;
+        }
+        &.item1 {
+          top: 62px;
+        }
+        &.item2 {
+          top: 104px;
+        }
+        &.item3 {
+          top: 374px;
+        }
+        &.item4 {
+          top: 414px;
+        }
+      }
+    }
+  }
+}

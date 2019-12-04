@@ -1,0 +1,136 @@
+.choice-template-wrapper {
+  /* border: 1px solid yellowgreen; */
+}
+img {
+  max-width: 100%;
+}
+.choice-template-wrapper p {
+  line-height: 2em;
+  font-size: 10.5pt;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.choice-template-wrapper ul {
+  list-style-type:disc;
+  list-style-position:inside;
+}
+.choice-template-wrapper ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.noTemplate {
+  color: red;
+}
+
+/* 选择题 */
+.multiple-choice-wrapper {
+  /* border: 1px solid #ddd; */
+}
+
+/* title */
+.question-index {
+  float: left;
+  line-height: 2em;
+  font-family: "思源黑体 CN Normal", "Microsoft YaHei";
+  font-size: 10.5pt;
+}
+.title-content::after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/* 选项 */
+.optionList-item-index {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+  width: 20px;
+}
+.optionList-item-content {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+  max-width: calc(100% - 2em);
+}
+
+/* labels */
+.labels-wrapper {
+  height: 30px;
+  color: #999;
+  font-size: 12px;
+}
+.labels-wrapper * {
+  display: inline-block;
+}
+
+/* 组合 */
+.group-wrapper {
+  /* border: 1px solid cyan; */
+}
+.group-item-label {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+}
+.group-item-content {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+  max-width: calc(100% - 2em);
+}
+
+/* 答案框 */
+.answerList-wrapper {
+  width: 100%;
+}
+.answerList-item-label {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+}
+.answerList-item-content {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+  max-width: calc(100% - 3em);
+}
+.answerList-item {
+
+}
+.optionList-item-wrapper .answerError {
+  background: rgb(160, 39, 39);
+}
+.optionList-item-wrapper .answerRight {
+  background: rgb(39, 212, 117);
+}
+.optionList-item-wrapper .active {
+  background: #53cc48;
+}
+
+/* 知识点 */
+.group-item-knowledgeNameList-label {
+
+}
+.knowledgeNameList-wrapper {
+
+}
+.knowledgeNameList-label {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+}
+.knowledgeNameList-content {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 2em;
+  max-width: calc(100% - 4em);
+}
+
+/* 作答区域 */
+.answerArea-warpper {
+  height: 50px;
+  /* border: 1px solid blueviolet; */
+}

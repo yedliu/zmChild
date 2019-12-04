@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+.animated-router {
+  /** START: 自定义进出场动画 **/
+  /** END **/ 
+  }
+  .animated-router-container {
+    height: 100%;
+    /* 动画容器节点 */ 
+  }
+  .kid-router-container {
+    /* 客户端时减去topbar的高度 */ 
+    height: calc(100% - 20px);
+    // height: 100%;
+    overflow: auto;
+  }
+  .animated-router-in-transition {
+    /* 页面动画中 */
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+  }
+  .animated-router-forward-enter {
+    transform: translate(100%);
+    -webkit-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -o-transform: translate(100%);
+  }
+  .animated-router-forward-enter-active {
+    transform: translate(100%); 
+    -webkit-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -o-transform: translate(100%);
+  }
+  .animated-router-forward-exit {
+    transform: translate(0); 
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+  }
+  .animated-router-forward-exit-active {
+    transform: translate(-100%);
+    -webkit-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    -o-transform: translate(-100%);
+  }
+  .animated-router-backward-enter {
+    transform: translate(-100%); 
+    -webkit-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    -o-transform: translate(-100%);
+  }
+  .animated-router-backward-enter-active {
+    transform: translate(0); 
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+  }
+  .animated-router-backward-exit {
+    transform: translate(0); 
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+  }
+  .animated-router-backward-exit-active {
+    transform: translate(100%); 
+    -webkit-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -o-transform: translate(100%);
+  }
+  .animated-router-forward-enter-active,
+  .animated-router-forward-exit-active,
+  .animated-router-backward-enter-active,
+  .animated-router-backward-exit-active {
+    /* 不同过渡阶段需要的过渡时间与缓动效果 */
+    transition: transform 0.35s linear;
+    -webkit-transition: transform 0.35s linear;
+    -ms-transition: transform 0.35s linear;
+    -moz-transition: transform 0.35s linear;
+    -o-transition: transform 0.35s linear;
+  }
+  .animated-router-forward-exit, .animated-router-backward-exit {
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }

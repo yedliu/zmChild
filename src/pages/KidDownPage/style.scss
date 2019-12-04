@@ -1,0 +1,10 @@
+@import '../../svgcss/bukebg.scss';
+#kiddownpage {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url($buke-bg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}

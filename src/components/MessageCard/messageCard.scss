@@ -1,0 +1,62 @@
+@import '../../base.scss';
+#centerContainer {
+  .message-box {
+    position: absolute;
+    width: auto;
+    top: 20px;
+    bottom: 0px;
+    right: 30px;
+    left: 0;
+    padding: 2px 14px 2px 44px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    .message-card {
+      width: 100%;
+      background: #ffffff url("./image/message_img_letter@2x.png") no-repeat top center;
+      background-size: 102% 13px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 40px 30px 30px 30px;
+      font-size: 20px;
+      position: relative;
+      &:last-child {
+        margin-bottom: 10px;
+      }
+      .time {
+        color: #999999;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      .content {
+        color: #666666;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .title {
+        position: relative;
+        .link-btn {
+          position: absolute !important;
+          color: #ffffff;
+          font-size: 14px;
+          width: 90px;
+          height: 40px;
+          @include DefaultRedBtn(40px);
+          right: 5px;
+          top: 0px;
+          text-align: center;
+        }
+      }
+      &.read {
+        background: #ffffff url("./image/message_img_letter_grey@2x.png") no-repeat top center;
+        background-size: 102% 13px;
+        color: #999999 !important;
+        .time {
+          color: #999999 !important;
+        }
+        .content {
+          color: #999999 !important;
+        }
+      }
+    }
+  }
+}

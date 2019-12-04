@@ -1,0 +1,122 @@
+@mixin questionItemCss {
+  word-break: break-all;
+  word-wrap: break-word;
+  flex: 1;
+  width: 100%;
+  font-size: 14px;
+  line-height: 2em;
+  p {
+    font-size: 14px;
+    line-height: 2em;
+  }
+  img {
+    max-width: 350px;
+    max-height: 400px;
+  }
+  img[zmtype="small"] {
+    vertical-align: middle;
+  }
+  .katex {
+  }
+  zmindent {
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    overflow: hidden;
+    vertical-align: middle;
+    color: transparent;
+    user-select: none;
+  }
+  zmblank {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 4em;
+    height: 1em;
+    text-align: center;
+    border: none;
+    user-select: none;
+  }
+  zmsubline {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 4em;
+    height: 1em;
+    vertical-align: text-bottom;
+    text-align: center;
+    border-bottom: 1px solid #000;
+  }
+  .katex-html {
+    background: transparent;
+    .base {
+      white-space: nowrap;
+    }
+  }
+  &:hover .buttons {
+    display: flex;
+  }
+  img {
+    vertical-align: middle;
+  }
+  table {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+  table td,
+  table th {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 3px 5px;
+  }
+  table th {
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+  }
+  blockquote {
+    display: block;
+    border-left: 8px solid #d0e5f2;
+    padding: 5px 10px;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 100%;
+    background-color: #f1f1f1;
+  }
+  code {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 0 3px;
+  }
+  pre code {
+    display: block;
+  }
+  ul, ol {
+    margin: 10px 0 10px 20px;
+  }
+  ul {
+    list-style-type:disc;
+    list-style-position:inside;
+  }
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+}
+
+@mixin  scrollBarStyle {
+  &::-webkit-scrollbar {
+    width: 8px;
+    border: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ECD6C5;
+    border: none;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}

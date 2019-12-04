@@ -1,0 +1,109 @@
+@import '../../../base.scss';
+
+#personalInfo {
+  .photo-area {
+    width: 100%;
+    margin-top: 77px;
+    height: 122px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .photo-bg {
+      position: relative;
+      width: 122px;
+      height: 122px;
+      border-radius: 61px;
+      overflow: hidden;
+      border: #ffffff 3px solid;
+      background: url("./image/home_img_photo_default@2x.png") center #ffffff;
+      background-size: cover;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .name-area {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+    height: 35px;
+    line-height: 35px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+  }
+  .no-info {
+    width: 100%;
+    height: 25px;
+    font-size: 15px;
+    padding: 0 100px;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+  }
+  .info-area {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 250px;
+    margin-bottom: 10px;
+    &.empty {
+      justify-content: center;
+    }
+    .sex {
+      line-height: 28px;
+      vertical-align: center;
+      position: relative;
+      padding-left: 30px;
+      &.boy {
+        height: 25px;
+        &:before {
+          display: inline-block;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          content: '';
+          left: 0;
+          background: url("./image/me_icon_sex_boy@2x.png") center no-repeat;
+          background-size: 20px 20px;
+        }
+      }
+      &.girl {
+        height: 25px;
+        &:before {
+          display: inline-block;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          content: '';
+          left: 0;
+          background: url("./image/me_icon_sex_girl@2x.png") left center no-repeat;
+          background-size: 20px 20px;
+        }
+      }
+    }
+    .grade {
+      position: relative;
+      padding-left: 30px;
+      height: 25px;
+      line-height: 28px;
+      vertical-align: center;
+      padding-right: 5px;
+      &:before {
+        display: inline-block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        content: '';
+        left: 0;
+        background: url("./image/me_icon_grade@2x.png") center no-repeat;
+        background-size: 20px 20px;
+      }
+    }
+  }
+}

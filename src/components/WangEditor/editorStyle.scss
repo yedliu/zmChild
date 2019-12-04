@@ -1,0 +1,110 @@
+.EditorWrapper, .EditorBox {
+  display:flex;
+  flex-direction: column;
+}
+
+.WrapperStyle1 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 2px 0 rgba(75,75,75,0.50);
+}
+
+.WrapperStyle2 {
+  width: 100%;
+  height: 100%;
+}
+
+.EditorContentWrapper {
+  flex: 1;
+}
+
+.ContentWrapperStyle {
+  border-radius: 6px;
+  background: #fff;
+}
+
+.BoxStyle1 {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  flex: 1;
+  font-size: 14px;
+  .w-e-text {
+    min-height: 100px;
+    overflow-y: auto;
+    p {
+      margin: 5px 0;
+    }
+  }
+  a {
+    color: #2385EE;
+  }
+  cursor: text;
+}
+
+.BoxStyle2 {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 6px;
+  flex: 1;
+  border: none;
+  .w-e-toolbar {
+    background: none!important;
+    border: none!important;
+    height: 0px!important;
+  }
+  .w-e-text-container {
+    height: auto!important;
+    border: none!important;
+    border-radius: 6px!important;
+    overflow: hidden!important;
+  }
+  .w-e-text {
+    min-height: 100px;
+    overflow-y: auto;
+    p {
+      margin: 5px 0;
+    }
+  }
+  a {
+    color: #2385EE;
+  }
+  cursor: text;
+}
+
+.InputWrapper {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: inline-block;
+  height: 22px;
+  width: 30px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background-image: url('./images/upload.png');
+  background-size: 100% 100%;
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    opacity: 0;
+  }
+}
+
+.BarStyle1 {
+  position: relative;
+  padding: none;
+  z-index: 101;
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: 0 1px 2px 0 #DDDDDD;
+}
+
+.BarStyle2 {
+  position: relative;
+  height: 1px;
+  border: none;
+  overflow: hidden;
+  visibility: hidden;
+}

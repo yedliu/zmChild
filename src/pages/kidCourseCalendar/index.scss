@@ -1,0 +1,442 @@
+@import '../../base.scss';
+@import '../../svgcss/messagebg.scss';
+.kidCourseCalendar{
+    min-width: 100%;
+    min-height:100%;
+    // padding-top:88px;
+    background: url($message-bg) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+    font-family: HYZhengYuan;
+    @include FlexCol;
+    .headerWrap{
+        height:80px;
+        width: 100%;
+        padding:0 20px;
+        box-sizing:border-box;
+        @include FlexRow;
+        align-items:center;
+        header{
+            position: relative;
+            width:100%;
+            height:100%;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size:32px;
+            line-height:80px;
+            .back{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width:50px;
+                height:50px;
+                margin-top:-25px;
+                background:url('../../statics/common/image/btn_back@2x.png') no-repeat;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+        }
+    }
+    .containerWrap{
+        // width:820px;
+        @include FlexRow;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        .container{
+            @include FlexRow;
+            justify-content:space-between;
+            width:820px;
+            height:531px;
+            margin:auto;
+            // background:pink;
+            .left-content{
+                @include FlexCol;
+                position: relative;
+                align-items: center;
+                width:455px;
+                height:531px;
+                background:rgba(96,134,255,1);
+                border-radius:41px;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    top:88px;
+                    right:-30px;
+                    width:47px;
+                    height:19px;
+                    background:url('./image/schedule_img_wire@2x.png') no-repeat;
+                    background-size: 100% 100%;
+                    z-index:10;
+
+                }
+                &::after{
+                    content:'';
+                    position: absolute;
+                    top:270px;
+                    right:-30px;
+                    width:47px;
+                    height:19px;
+                    background:url('./image/schedule_img_wire@2x.png') no-repeat;
+                    background-size: 100% 100%;
+                    z-index: 10;
+
+                }
+                .calendar-title{
+                    @include FlexRow;
+                    position: relative;
+                    margin-top:25px;
+                    width:411px;
+                    height:64px;
+                    background: url('./image/schedule_bg_year_long@2x.png') no-repeat;
+                    background-size: 100% 100%;
+                    border-radius:14px;
+                    color: #fff;
+                    align-items: center;
+                    justify-content: center;
+                    .prev-button{
+                        width:17px;
+                        height:24px;
+                        margin-right:22px;
+                        background: url('./image/schedule_btn_left@2x.png') no-repeat;
+                        background-size:100% 100%;
+                        cursor: pointer;
+                    }
+                    .month {
+                        font-size: 20px;
+                    }
+                    .next-button{
+                        width:17px;
+                        height:24px;
+                        margin-left:22px;
+                        background: url('./image/schedule_btn_right@2x.png') no-repeat;
+                        background-size:100% 100%;
+                        cursor: pointer;
+                    }
+                    .today{
+                        position: absolute;
+                        right:26px;
+                        width:34px;
+                        height:34px;
+                        background:#fff;
+                        border-radius:100%;
+                        font-size:17px;
+                        color:rgba(77,114,230,1);
+                        font-weight:600;
+                        line-height:34px;
+                        text-align:center;
+                        cursor: pointer;
+                        user-select: none;
+                    }
+                }
+                .calendar-content{
+                    position: relative;
+                    margin-top:13px;
+                    width:412px;
+                    height:397px;
+                    background:rgba(255,255,255,1);
+                    border-radius:20px 20px 34px 20px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: -1px;
+                        bottom: -22px;
+                        width: 414px;
+                        height:61px;
+                        background:url('./image/schedule_corner_big@2x.png') no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .left-dot{
+                        position: absolute;
+                        top:12px;
+                        left:14px;
+                        width:12px;
+                        height:12px;
+                        background:rgba(222,223,227,1);
+                        border-radius:100%;
+                    }
+                    .right-dot{
+                        position: absolute;
+                        top:12px;
+                        right:14px;
+                        width:12px;
+                        height:12px;
+                        background:rgba(222,223,227,1);
+                        border-radius:100%;
+                    }
+                }
+                .calendar-tip{
+                    position: absolute;
+                    left:-62px;
+                    bottom:-18px;
+                    width:322px;
+                    height:98px;
+                    padding:32px 64px 15px 84px;
+                    box-sizing: border-box;
+                    color: #A85F31;
+                    font-size:13px;
+                    background:url('./image/schedule_img_fox@2x.png') no-repeat;
+                    background-size: 100% 100%;
+                    .close{
+                        position: absolute;
+                        right:22px;
+                        top:32px;
+                        width:33px;
+                        height:33px;
+                        background: url('../../statics/common/image/schedule_icon_close@2x.png') no-repeat;
+                        background-size: 100% 100%;
+                        cursor: pointer;
+                        
+                    }
+                }
+                .tableWrap{
+                 @include FlexCol;
+                //  margin-top:28px;
+                 font-size:16px;
+                 color:#454545;
+                 padding:48px 38px 0 38px;
+                 .tableHeader{
+                     @include FlexRow;
+                     color: #CCCCCC;
+                     .week{
+                         flex: 1;
+                         text-align: center;
+                     }
+                 }
+                 .tableContent{
+                    @include FlexCol;
+                    margin-top:15px;
+                    .tabletr{
+                        @include FlexRow;
+                        flex:1;
+                        margin-top:6px;
+                        height: 40px;
+                        line-height:40px;
+                        .tabletd{
+                            position: relative;
+                            flex:1;
+                            text-align:center;
+                            line-height:36px;
+                            cursor: pointer;
+                            &.otherMonth{
+                                color: #CCCCCC;
+                            }
+                            .currentDay{
+                                color:rgba(255,94,101,1);
+                                font-style:normal;
+                            }
+                            .selectedDay{
+                                position: absolute;
+                                left:0;
+                                top:0;
+                                width:42px;
+                                height:42px;
+                                background:rgba(255,94,101,1);
+                                border-radius:100%;
+                                color:#fff;
+                                font-style:normal;
+                                .currentDay{
+                                    color:#fff;
+                                }
+                                &.green-dot, &.gray-dot,&.red-dot{
+                                    &::before{
+                                        background:#fff;
+                                    }
+                                }
+                            }
+                            .gray-dot{
+                                &::before{
+                                    content:'';
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom:6px;
+                                    width:6px;
+                                    height:6px;
+                                    background:rgba(204,204,204,1);
+                                    border-radius: 100%;
+                                    transform: translateX(-50%);
+                                }
+                            } 
+                            .green-dot{
+                                &::before{
+                                    content:'';
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom:6px;
+                                    width:6px;
+                                    height:6px;
+                                    background:rgba(66,192,102,1);
+                                    border-radius: 100%;
+                                    transform: translateX(-50%);
+                                }
+                            } 
+                            .red-dot{
+                                &::before{
+                                    content:'';
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom:6px;
+                                    width:6px;
+                                    height:6px;
+                                    background:rgba(255,105,105,1);
+                                    border-radius: 100%;
+                                    transform: translateX(-50%);
+                                }
+                            } 
+                        }
+                    }
+                 }
+                }
+            }
+            .right-content{
+                position: relative;
+                width:350px;
+                height:531px;
+                background:rgba(96,134,255,1);
+                border-radius:41px;
+                @include FlexCol;
+                align-items:center;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    bottom:64px;
+                    left:-30px;
+                    width:47px;
+                    height:19px;
+                    background:url('./image/schedule_img_wire@2x.png') no-repeat;
+                    background-size: 100% 100%;
+                    
+                }
+                .calendar-title{
+                    width:307px;
+                    height:65px;
+                    margin-top: 25px;
+                    background:url('./image/schedule_bg_year_short@2x.png') no-repeat;
+                    background-size: 100% 100%;
+                    color:rgba(255,255,255,1);
+                    text-align: center;
+                    line-height:65px;
+                    font-size:20px;
+                }
+                .calendar-content{
+                    margin-top:15px;
+                    width:96%;
+                    height:412px;
+                    overflow-y: auto;
+                    &::-webkit-scrollbar {
+                        position: relative;
+                        right:-10px;
+                        width:6px;
+                        height:138px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {  
+                        border-radius: 3px;  
+                        background-color: #334CDD;  
+                    }  
+                    section{
+                        position: relative;
+                        width:307px;
+                        background:rgba(255,255,255,1);
+                        border-radius:14px;
+                        border-bottom-right-radius:0;
+                        margin-top:13px;
+                        padding:23px 25px 25px 25px;
+                        box-sizing: border-box;
+                        font-size:16px;
+                        color:rgba(102,102,102,1);
+                        margin-left:15px;
+                        overflow: hidden;
+                        &:nth-child(1){
+                            margin-top:0;
+                        }
+                        header{
+                            @include FlexRow;
+                            align-content: center;
+                            time{
+                                margin-right: 14px;
+                            }
+                        }
+                        h3{
+                            font-size:18px;
+                            color:rgba(51,51,51,1);
+                            margin: 8px 0;
+                        }
+                        p{
+                            @include FlexRow;
+                            align-items: center;
+                            font-size:16px;
+                            color:rgba(153,153,153,1);
+                            margin-bottom: 4px;
+                            margin-bottom:5px;
+                            span{
+                                display:inline-block;
+                                width:22px;
+                                height:22px;
+                                background:rgba(96,134,255,1);
+                                color: #fff;
+                                font-size:12px;
+                                text-align: center;
+                                line-height:22px;
+                                border-radius:100%;
+                                margin-right:5px;
+                                img{
+                                    width:100%;
+                                    border-radius: 100%;
+                                }
+                            }
+                        }
+                        .timeLeft{
+                            font-size: 16px;
+                            margin-top:14px;
+                        }
+                        .repmis-lesson-info{
+                            width: 256px;
+                            margin-top:14px;
+                            margin-left:-12px;
+                            padding: 14px 12px;
+                            background:rgba(239,240,245,1);
+                            border-radius:6px;
+                            color: rgba(155,155,155,1);
+                            p{
+                                font-size:16px;
+                            }
+                            .title{
+                                font-size:14px;
+                                color:rgba(69,69,69,1);
+                            }
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            right:-2px;
+                            bottom:-2px;
+                            width:41px;
+                            height:32px;
+                            background: url('./image/schedule_corner_small@2x.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        &.no-course{
+                            @include FlexCol;
+                            align-items: center;
+                            font-size:14px;
+                            color:rgba(153,153,153,1);
+                            .img_default_no{
+                                margin-bottom:10px;
+                                width: 164px;
+                                height:137px;
+                                background:url('../../statics/common/image/img_default_no@2x.png') no-repeat;
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+    }
+
+}

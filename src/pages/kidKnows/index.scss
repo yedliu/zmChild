@@ -1,0 +1,46 @@
+@import '../../base.scss';
+@import '../../svgcss/homebg.scss';
+.kidKnows{
+    min-width: 100%;
+    min-height:100%;
+    // padding-top:88px;
+    background: url($home-bg) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    flex-shrink:0;
+    position: relative;
+    @include FlexCol;
+    align-items: center;
+    #kid-header{
+        width:100%;
+    }
+    .content{
+        flex:1;
+        @include FlexCol;
+        align-content: center;
+        justify-content: center;
+        .iframeWrap{
+            min-width:1170px;
+            height:600px;
+            background:#fff;
+            border:12px solid #6086FF;
+            border-radius:48px;
+            padding:12px;
+            box-sizing: border-box;
+            &::before{
+                content: '';
+                position: absolute;
+                top:-12px;
+                left:52px;
+                width: 59px;
+                height:12px;
+                background: url('../../statics/common/image/img_qipao.png');
+                background-size: 100% 100%;
+            }
+
+        }
+        iframe{
+            border:none;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+#guide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  .guide-box {
+    .handle {
+      width: 80px;
+      height: 86px;
+      background: url('./images/hand.png') no-repeat;
+    }
+    .tips {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 320px;
+      height: 190px;
+      background: url('../../../statics/common/image/guide_cloud@2x.png') no-repeat;
+      background-size: 100%;
+      p {
+        color:rgba(112,78,39,1);
+        font-size: 16px;
+        font-family: HYZhengYuan;
+        width: 200px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

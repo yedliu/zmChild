@@ -1,0 +1,51 @@
+.entry-wrapper{
+    position: fixed;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    .mask{
+        position: fixed;
+        height: 100%;
+        width:100%;
+        top:0;
+        left:0;
+        background:#000;
+        opacity: 0.7;
+    }
+    .guide{
+    position: absolute;
+    right:18.8%;
+    bottom:5px;
+    z-index: 9999;
+        .cloud{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        font-size:16px;
+        font-family:HYZhengYuan;
+        font-weight:normal;
+        color:rgba(112,78,39,1);
+        line-height:24px;
+        background:url('../../statics/common/image/guide_cloud@2x.png') no-repeat;
+        background-size: contain;
+        width:425px;
+        height: 321px;
+            p{
+                margin-top:73px;
+                margin-bottom:20px;
+                text-align:center;
+            }
+        }
+        .arrow{
+            width:94px;
+            height:71px;
+            background:url('../../statics/common/image/studyland-entry@2x.png') no-repeat;
+            background-size:contain;
+            position:absolute;
+            left:366px;
+            top:219px;
+        }
+    }
+}

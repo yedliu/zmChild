@@ -1,0 +1,47 @@
+@import '../../base.scss';
+@import '../../svgcss/notfindbg.scss';
+#network-error{    
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: HYZhengYuan;
+  color: #fff;
+  text-align: center;
+  background: url($notfind-bg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  .tip{
+      height:324px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      margin:auto;
+      justify-content: space-between;
+      img{
+          width:230px;
+      }
+      p{
+          font-size:18px;
+      }
+      button{
+          width: 171px;
+          position: relative;
+          text-indent: 20px;
+          &::after{
+              content:'';
+              display:block;
+              width:20px;
+              height:20px;
+              position: absolute;
+              top:13px;
+              left:35px;
+              background:url(./image/icon_refresh2@2x.png) no-repeat;
+              background-size: contain;
+          }
+      }
+  }
+}

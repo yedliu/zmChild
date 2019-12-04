@@ -1,0 +1,24 @@
+@import '../../base.scss';
+@import '../../svgcss/setbg.scss';
+#kidhistoryvideo {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url($set-bg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  .VideoWrapper {
+    width: 100%;
+    // padding-top:70px;
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:center;
+    padding-bottom: 50px;
+    height:100%;
+    // overflow:auto;
+  }
+}

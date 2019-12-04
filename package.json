@@ -1,0 +1,77 @@
+{
+  "name": "zm-kid-client",
+  "version": "1.0.0",
+  "description": "掌门少儿客户端",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env rm -rf .cache && rm -rf dist && parcel --no-hmr --target=browser index.html",
+    "startUat": "cross-env  BUILD_TYPE=uat parcel --no-hmr  --target=browser index.html",
+    "start:develop": "cross-env  BUILD_TYPE=develop parcel --no-hmr  --target=browser index.html",
+    "start:prod": "cross-env  BUILD_TYPE=prod parcel --no-hmr  --target=browser index.html",
+    "buildTest": "cross-env BUILD_TYPE=test parcel build  index.html --public-url /kid",
+    "buildUat": "cross-env BUILD_TYPE=uat parcel build  index.html --public-url /kid",
+    "buildProd": "cross-env BUILD_TYPE=prod parcel build  index.html --public-url /kid",
+    "buildDev": "cross-env BUILD_TYPE=develop parcel build  index.html --public-url /kid",
+    "fat": "cross-env BUILD_TYPE=test parcel build  index.html --public-url /kid",
+    "uat": "cross-env BUILD_TYPE=uat parcel build  index.html --public-url /kid",
+    "pro": "cross-env BUILD_TYPE=prod parcel build  index.html --public-url /kid",
+    "build-es5": "nwb build-react-component --copy-files"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "dayjs": "^1.8.15",
+    "dva": "^2.4.1",
+    "dva-core": "^1.6.0-beta.6",
+    "dva-loading": "^3.0.12",
+    "history": "^4.9.0",
+    "immutable": "^4.0.0-rc.12",
+    "katex": "^0.11.0",
+    "parcel": "^1.12.3",
+    "postcss-scss": "^2.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-draggable": "^3.3.2",
+    "react-transition-group": "^4.2.2",
+    "svgaplayerweb": "^2.3.0",
+    "wait-promise": "^0.4.1",
+    "wangeditor": "^3.1.1",
+    "zmNativeBridge": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "postcss-modules": "^1.4.1",
+    "postcss-pxtorem": "^4.0.1",
+    "sass": "^1.22.10"
+  },
+  "alias": {
+    "components": "./src/components",
+    "containers": "./src/containers",
+    "utils": "./src/utils",
+    "api": "./src/api",
+    "images": "./src/containers/images",
+    "src": "./src",
+    "statics": "./src/statics"
+  },
+  "proxy": {
+    "/kidsStuApi": {
+      "target": "http://x-chat-test.zmlearn.com",
+      "changeOrigin": true
+    }
+  }
+}

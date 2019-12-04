@@ -1,0 +1,61 @@
+@import '../../../base.scss';
+
+#testInfo {
+  height: 100%;
+  .had-test {
+    height: 100%;
+  }
+  .un-test {
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .no-bg {
+      width: 100%;
+      height: 188px;
+      background: url("../../../statics/common/image/img_default_no@2x.png") no-repeat center;
+      background-size: 224px 188px;
+      margin-top: 73px;
+      margin-bottom: 22px;
+    }
+    .no-tip {
+      margin-top: 20px;
+      color: #ffffff;
+      font-size: 18px;
+      text-align: center;
+    }
+    .test-btn {
+      margin: 12px auto 0 auto;
+      height: 45px;
+      width: 170px;
+      color: #ffffff;
+      font-size: 18px;
+      text-align: center;
+      @include DefaultRedBtn(45px);
+      @include HoverFinger;
+    }
+    .test-item {
+      width:300px;
+      height: 340px;
+      font-size:22px;
+      text-align: center;
+      position: relative;
+      cursor:url('../../../statics/common/image/mouse_img_selected.png'),default;
+      p{
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:77px;
+      }
+      // 阶段测评
+      &.phase-test{
+        background:url("../image/img_personal_formativetest@2x.png") no-repeat center;
+        background-size:contain;
+      }
+      &.ability-test{
+        background:url("../image/img_personal_studytest@2x.png") no-repeat center;
+        background-size:contain;
+      }
+    }
+  }
+}

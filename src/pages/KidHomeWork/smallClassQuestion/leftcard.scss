@@ -1,0 +1,94 @@
+#leftCard {
+  display: flex;
+  justify-content: center;
+  width: 263px;
+  height: 586px;
+  margin-right: 16px;
+	padding: 10px;
+  background: url('../images/homework_img_report_small.png') no-repeat;
+  background-size: 100% 100%;
+
+  .task-info {
+    width: 200px;
+    height: 100%;
+    padding: 10px 0 0 10px;
+    overflow-y: auto;
+    .innerleft{
+      height:100%;
+      overflow: auto;
+      padding-right: 16px;
+      &::-webkit-scrollbar-track{
+        display:none;
+      }
+      &::-webkit-scrollbar-button {
+        display:none;
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color:#ECD6C5;
+      }
+      &::-webkit-scrollbar-track-piece{
+        display:none;
+      }
+      &::-webkit-scrollbar-corner{
+        display:none;
+      }
+    }
+    .progress{
+      position:relative;
+      text-align:center;
+      margin:12px auto 0;
+      canvas{
+        height:128px;
+        width:128px;
+      }
+      .score-number{
+        position:absolute;
+        width:116px;
+        height:56px;
+        line-height:56px;
+        top:50%;
+        margin-top:-28px;
+        left:50%;
+        margin-left:-58px;
+        font-size:16px;
+        color:#FF7E30;
+        .number{
+          font-size:32px;
+        }
+      }
+    }
+    .info{
+      margin:36px 0 14px;
+      font-size:14px;
+      color:#452B13;
+      .info-item{
+        margin-top:10px;
+      }
+      .knowlegge{
+        margin-top:40px;
+      }
+      span{
+        color:#452b13;
+        font-weight: bold;
+      }
+      .line-progress{
+        margin-top:20px;
+      }
+    }
+  }
+
+  .distribution {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    .score-item {
+      color:#906113;
+      font-size:14px;
+      text-align:center;
+      span{
+        color:#5D2500;
+        font-size:20px;
+      }
+    }
+  }
+}

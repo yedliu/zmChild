@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_success</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-461.000000, -47.000000)">
+            <g id="icon/16/成功" transform="translate(461.000000, 47.000000)">
+                <g id="分组-2">
+                    <circle id="椭圆形" fill="#2EAC43" cx="8" cy="8" r="8"></circle>
+                    <path d="M9.06207676,9.41167947 L9.06207676,3.41167947 C9.06207676,2.85939472 9.50979201,2.41167947 10.0620768,2.41167947 C10.6143615,2.41167947 11.0620768,2.85939472 11.0620768,3.41167947 L11.0620768,10.4116795 C11.0620768,10.9639642 10.6143615,11.4116795 10.0620768,11.4116795 L6.06207676,11.4116795 C5.50979201,11.4116795 5.06207676,10.9639642 5.06207676,10.4116795 C5.06207676,9.85939472 5.50979201,9.41167947 6.06207676,9.41167947 L9.06207676,9.41167947 Z" id="合并形状" fill="#FFFFFF" transform="translate(8.062077, 6.911679) rotate(-315.000000) translate(-8.062077, -6.911679) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

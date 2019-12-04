@@ -1,0 +1,58 @@
+@import '../../base.scss';
+Button{
+    width: 142px;
+    height:45px;
+    outline: none;
+    border:none;
+    @include DefaultRedBtn(45px);
+    font-size: 14px;
+    color: #fff;
+    font-family: HYZhengYuan;
+    cursor: pointer;
+    @include HoverFinger;
+    &.normal{
+        width:77px;
+        min-width:77px;
+        min-height:36px;
+        height:36px;
+        @include DefaultYellowBtn(36px);
+    }
+    &.normal-y{
+        width: 100px;
+        height:45px;
+        @include DefaultYellowBtn(45px);
+    }
+    &.large{
+        width: 256px;
+        height:44px;
+        @include DefaultRedBtn(44px);
+    }
+    &.xlarge{
+        width:319px;
+        height:45px;
+        @include DefaultRedBtn(45px);
+    }
+    &.medium{
+        width: 170px;
+        height: 45px;
+        @include DefaultRedBtn(45px);
+    }
+    &.small{
+        width: 100px;
+        height:45px;
+        @include DefaultRedBtn(45px);
+    }
+    &.disabled{
+        @include DefaultGrayBtn(45px);
+        &.large{
+            width: 256px;
+            height:44px;
+            @include DefaultGrayBtn(45px);
+        }
+        &.small{
+            width: 100px;
+            height:45px;
+            @include DefaultGrayBtn(45px);
+        }
+    }
+}

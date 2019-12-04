@@ -1,0 +1,29 @@
+.course-state{
+    display: inline-block;
+    width:58px;
+    height:18px;
+    border-radius:9px;
+    text-align: center;
+    line-height:19px;
+    font-size: 12px;
+    &.state-0104,&.state-0403,&.state-0102,&.state-0406,&.state-0103,&.state-0404,&.state-0405,&.state-0305{
+        background:rgba(255,219,219,1);
+        color: #FA6C6C;
+    }
+    &.state-02,&.state-0101,&.state-0502,&.state-0301,&.state-0302,&.state-0303,&.state-0304,&.state-0306,&.state-0501{
+        background:rgba(223,224,231,1);
+        color:#8490B0;
+    }
+    //测评课
+    &.state-1{
+        background:rgba(202,242,214,1);
+        color:#35AF58;
+        margin-right: 5px;
+    }
+    //跳水课
+    &.state-3{
+        background:#FFEBA1;
+        color:#E7A700;
+        margin-right: 5px;
+    }
+}

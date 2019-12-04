@@ -1,0 +1,10 @@
+@import '../../svgcss/bukebg.scss';
+#kiddownparnter {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(../../statics/common/image/splash.png) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}

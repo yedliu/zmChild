@@ -1,0 +1,199 @@
+@import '../../base.scss';
+#zm-alert {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color:transparent;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+  font-family: HYZhengYuan;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .content {
+    margin: 0 auto;
+    padding: 40px 50px;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    width: 420px;
+    border: 12px #6086FF solid;
+    border-radius: 30px;
+    position: relative;
+    background-color: #fff;
+    &:before {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: 35px;
+      top: -12px;
+      width: 60px;
+      height: 12px;
+      background: url("./image/qipao@2x.png") no-repeat;
+      background-size: auto 12px;
+    }
+
+    &.submit-error {
+      background: #fff url("./image/img_pop_fail@2x.png") no-repeat center top;
+      background-size: 100% auto;
+      padding: 145px 30px 40px 30px;
+      .message {
+        font-size: 16px;
+        line-height: 30px;
+        color: #666666;
+      }
+    }
+
+    &.zhangxiaomen-cry {
+      background: #ffffff url("../../statics/common/image/img_pop_meike.png") no-repeat center top;
+      background-size: 100% auto;
+      padding: 145px 30px 40px 30px;
+      .message {
+        font-size: 16px;
+        line-height: 30px;
+        color:rgba(51,51,51,1);
+      }
+    }
+
+    &.nofree {
+      background: #ffffff url("../../statics/common/image/img_pop_nofree.png") no-repeat center top;
+      background-size: 100% auto;
+      padding: 145px 30px 40px 30px;
+      .message {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+    &.meike {
+      background: #fff url('../../statics/common/image/img_pop_meike.png') no-repeat center top;
+      .title {
+        margin-top: 100px;
+        color:rgba(0,0,0,0.82);
+        font-weight: normal;
+        font-size: 20px;
+      }
+      .message {
+        font-size: 14px;
+        color:rgba(153,153,153,1);
+      }
+    }
+
+    &.partner1 {
+      background: #fff url("../../statics/common/image/img_foxpop_successfruit.png") no-repeat center top;
+      .title {
+        margin-top: 100px;
+        color: #333;
+      }
+      .message {
+        font-size: 16px;
+        color:rgba(51,51,51,1);
+      }
+    }
+
+    &.hashours {
+      background: #ffffff url("../../statics/common/image/img_pop_hashours.png") no-repeat center top;
+      background-size: 100% auto;
+      padding: 145px 30px 40px 30px;
+      .message {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+    &.partner2 {
+      background: #fff url("../../statics/common/image/img_meimeitu_successfruit.png") no-repeat center top;
+      .title {
+        margin-top: 100px;
+        color: #333;
+      }
+      .message {
+        font-size: 16px;
+        color:rgba(51,51,51,1);
+      }
+    }
+
+    &.download {
+      background: #ffffff url("../../statics/common/image/img_pop_download.png") no-repeat center top;
+      background-size: 100% auto;
+      padding: 145px 30px 40px 30px;
+      .message {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+    &.download.studyPark{
+      background:#fff;
+      padding:38px 0;
+    }
+    &.partner3 {
+      background: #fff url("../../statics/common/image/img_pandapop_success_get.png") no-repeat center top;
+      .title {
+        margin-top: 100px;
+        color: #333;
+      }
+      .message {
+        font-size: 16px;
+        color:rgba(51,51,51,1);
+      }
+    }
+
+    .message {
+      font-size: 20px;
+      line-height: 30px;
+      color: #333333;
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn-box-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 25px;
+      .btn {
+        width: 120px;
+        height: 42px;
+        color: #ffffff;
+        margin: 0 16px;
+      }
+
+      .ok {
+        @include DefaultRedBtn(42px);
+      }
+
+      .cancel {
+        @include DefaultYellowBtn(42px);
+      }
+    }
+
+    .btn-box-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 25px;
+      .btn {
+        min-width: 170px;
+        height: 42px;
+        color: #ffffff;
+        @include DefaultRedBtn(42px);
+      }
+    }
+  }
+}

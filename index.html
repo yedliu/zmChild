@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+      <meta charset="utf-8">
+      <!-- 打开dns预解析 -->
+      <meta http-equiv="x-dns-prefetch-control" content="on" />
+      <!-- Make the page mobile compatible -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+      <link rel="icon" href="./src/favicon.ico" />
+      <title>掌门少儿</title>
+      <!-- 设置需要预解析的域名 -->
+      <link rel="dns-prefetch" href="//static.zhangmen.com">
+      <link rel="dns-prefetch" href="//image.zmlearn.com">
+      <link rel="dns-prefetch" href="//doc.zmlearn.com">
+      <link rel="dns-prefetch" href="//zm.zmlearn.com">
+      <link rel="dns-prefetch" href="//zml-orgin.zmlearn.com">
+      <script>
+        function getCookie(c_name)
+        {
+          if (document.cookie.length>0)
+          {
+            let c_start=document.cookie.indexOf(c_name + "=")
+            if (c_start!=-1)
+            {
+              c_start=c_start + c_name.length+1
+              let c_end=document.cookie.indexOf(";",c_start)
+              if (c_end==-1) c_end=document.cookie.length
+              return unescape(document.cookie.substring(c_start,c_end))
+            }
+          }
+          return ""
+        }
+       
+
+        function resizeWindow() {
+          window.addEventListener('load', resizeFontSize);
+          window.addEventListener('resize', delayT);
+          var timer = setTimeout(resizeFontSize, 300);
+          resizeFontSize();
+          function delayT() {
+            clearTimeout(timer);
+            timer = setTimeout(resizeFontSize, 100);
+          }
+          function resizeFontSize() {
+            var dpr, rem, scale;
+            var clientWidth = document.documentElement.clientWidth;
+            var docEl = document.documentElement;
+            var appEl = document.querySelector('#app');
+            var metaEl = document.querySelector('meta[name="viewport"]');
+            if (clientWidth > 1440) {
+              dpr = 1 || window.devicePixelRatio; // 这里本应该用设备dpr但是android webview有bug scale无效
+              scale = 1.2;
+              rem = 120;
+            } else {
+              dpr = 1;
+              scale = 1;
+              rem = 100;
+            }
+
+            metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+            docEl.setAttribute('data-dpr', dpr);
+            // 动态写入样式
+            if (appEl) {
+              docEl.style.fontSize = rem + 'px';
+              // appEl.style.width = docEl.clientWidth + 'px';
+              // appEl.style.height = docEl.clientHeight + 'px';
+            }
+          }
+          return function () {
+            window.removeEventListener('load', resizeFontSize);
+            window.removeEventListener('resize', delayT);
+          };
+        }
+        resizeWindow()
+
+      </script>
+  </head>
+<body>
+  <div id="app">
+
+  </div>
+  <script src="./src/index.js"></script>
+</body>
+  <script src='//statics-lib.zmlearn.com/zm-jssdk/stable/zm-jssdk.js' defer></script>
+  <script src='//statics-lib.zmlearn.com/zm-fe/2.0.1/zmResourcesLocalizationes5.js'></script>
+  <script src='//statics-lib.zmlearn.com/zm-fe/2.0.1/zmResourcesLocalizationebiz.js'></script>
+  <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://web-data.zmlearn.com/config/92e9fda3-dfd5-424f-9203-63f201598942.js" crossorigin defer></script>
+  <script type="text/javascript" src="//acc.zmlearn.com/index.js" crossorigin defer></script>
+</html>

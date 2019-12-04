@@ -1,0 +1,129 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  background-color:transparent;
+  font-family:"思源黑体 CN Normal", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  .katex-html{
+    background:none !important;
+  }
+  text-size-adjust:none;
+  -webkit-text-size-adjust:none;
+  cursor: url("./statics/common/image/mouse_img_normal.png"), default;
+}
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 660px;
+    min-width: 1170px;
+    background-color:transparent;
+    font-family:"思源黑体 CN Normal", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    .katex-html{
+      background:none !important;
+    }
+    position: relative;
+    #app {
+      width: 100%;
+      height: 100%;
+      // min-width: 1170px;
+      // min-height: 660px;
+      padding: 0px;
+      background-color:transparent;
+      height: 100%;
+    }
+
+  }
+
+  body.fontLoaded {
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    //width: 13px;
+    width: 9px;
+    height: 10px;
+    padding-top: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      border-radius:10px;
+      height: 30px;
+      width: 5px;
+      border: none;
+      background: #ddd;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color:#bbb!important;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background-color:#bbb!important;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+
+  /***根目录height100% *****/
+  [data-reactroot] {
+    height: 100% !important;
+  }
+  [data-reactroot].ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background-color: rgba(0, 0, 0, .3)!important;
+    min-width: 1110px;
+  }
+
+  .Dropdown-menu {
+    max-height: 210px!important;
+  }
+  .miniScrollBar {
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 0;
+      color: rgba(0, 0, 0, 0.35);
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#all-router {
+  width: 100%;
+  height: 100%;
+  // overflow: hidden;
+}
+
+// @media (min-width: 1440px){
+//   body{
+//     transform: scale(1.2);
+//     transform-origin: 0 0;
+//   }
+// }
+
+@font-face {
+  font-family: HYZhengYuan;
+  src: local('HYZhengYuan-65W.ttf'), url('http://127.0.0.1:9123/fonts/HYZhengYuan-65W.ttf'), url('//static.zhangmen.com/fonts/HYZhengYuan-65W.ttf');
+  }
+  
+@font-face {
+font-family: HYCuYuanJ;
+src: local('HYCuYuanJ.ttf'), url('http://127.0.0.1:9123/fonts/HYCuYuanJ.ttf'), url('//static.zhangmen.com/fonts/HYCuYuanJ.ttf');
+}
+

@@ -1,0 +1,134 @@
+@import '../../../base.scss';
+
+#lessonsInfo {
+  font-family: HYZhengYuan;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .bu-list {
+    height: 48px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    line-height: 48px;
+    padding-left: 30px;
+    font-size: 16px;
+    .bu-item {
+      width: 107px;
+      height: 100%;
+      float: left;
+      background: url("image/me_btn_subject@2x.png") no-repeat center;
+      background-size: contain;
+      margin-right: 15px;
+      text-align: center;
+      color: white;
+      @include HoverFinger;
+      &.active {
+        background: url("image/me_btn_subject_select@2x.png") no-repeat center;
+        background-size: contain;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .lesson-detail {
+      @include HoverFinger;
+      font-family: HYZhengYuan;
+      color: #ffffff;
+      line-height: 30px;
+      font-size: 14px;
+      float: right;
+      margin-top: 12px;
+      padding-right: 30px;
+      padding-left: 30px;
+      margin-right: 30px;
+      position: relative;
+      &:after {
+        display: inline-block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        content: '';
+        right: 0;
+        top: 2px;
+        background: url("./image/me_icon_detail@2x.png") center no-repeat;
+        background-size: 10px 10px;
+      }
+    }
+  }
+  .lessons-main {
+    flex: 1;
+    margin: 0 30px;
+    overflow-y: auto;
+    &::-webkit-scrollbar { display: none; }
+    .bu-container {
+      position: relative;
+      padding-top: 4px;
+      margin-bottom: 16px;
+      .course-type {
+        .title {
+          color: white;
+          font-size: 14px;
+          padding-left: 5px;
+        }
+        .lessons {
+          position: relative;
+          height: 100%;
+        }
+      }
+      .free-lesson-item {
+        position: relative;
+        display: inline-block;
+        width: 161px;
+        height: 185px;
+        margin-top: 20px;
+        margin-right: 17px;
+        background: url("./image/me_card_normal@2x.png") no-repeat center;
+        background-size: cover;
+        .course-title {
+          position: absolute;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          font-size: 15px;
+          color: #ffffff;
+          text-align: center;
+        }
+        .course-info {
+          position: absolute;
+          height: 140px;
+          top: 40px;
+          width: 100%;
+          .content {
+            font-size: 14px;
+            color: #999999;
+            text-align: center;
+            margin: 20px 0 8px 0;
+          }
+          .total {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+          }
+        }
+      }
+      .course-type-empty {
+        margin-top: 20px;
+        .no-bg {
+          width: 100%;
+          height: 188px;
+          background: url("../../../statics/common/image/img_default_no@2x.png") no-repeat center;
+          background-size: 224px 188px;
+        }
+        .no-tip {
+          margin-top: 20px;
+          color: #ffffff;
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

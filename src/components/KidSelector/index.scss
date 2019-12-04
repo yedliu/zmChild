@@ -1,0 +1,86 @@
+$arrowimg: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAOCAYAAAArMezNAAABk0lEQVQ4T63Su0vDUBQG8O8kKVrxgW7iX6CDTg4+EDcRFC0lDk6d3LQoilIVCmoUBAfFVRenRlpxVii0OrmIg7ta34qlW3qTIzdg8dH6au+Se2/O+eXj3hAARHRdPRMp3SZ0gVFLIBWAxgwN5GhyzYDcUwAIAgmAbQZs+QQUQcQvcJR4i6c+MmSaNkk45OuYArhXzosdCiG2GD3eoLDeU2eJzG6x4Lt+p8YmH835uhodiM0SwrA1ClB4pL8i+/AUYaCiFDgRnj1qw7B7xrP+zn52nPFSwGB1ydhLHLqwi/vaxxgYLA5XdoxYcksaOVj+cqd2ymBG639wBsWNaHKBiPgDLBfhQHe5lbZWADT/BSfGucfTMB42TeutL5f4bWNN172P4noV4Kbf4AS6qNK8wRnzIP2+/gvsJte7Ky2RXfkJJ+DW0dTgspl4+BwiLyyL1kd7y+6v0vMO0F4g+R1InTCiiZt87wvCsti9UJEKMtD3sZkuWVMm8yUteMb5vh7yt/WAaYCASjBOqm3ant4/ynx3B6+O/IyDmtgLCwAAAABJRU5ErkJggg==';
+$normalColor: #7A513A;
+$subColor: #C8A56B;
+$disabledColor: #B7B7C2;
+
+.kid-selector {
+  position: relative;
+  flex: 1;
+ 
+  &-content {
+    display: flex;
+    height: 59px;
+    line-height: 59px;
+
+    .pre-label {
+      padding: 0 26px;
+      color: $normalColor;
+      font-family: HYZhengYuan;
+    }
+
+    .selected {
+      padding: 0 10px;
+      color: $subColor;
+      font: 16px/59px HYZhengYuan;
+
+      &.had-selected {
+        color: $normalColor;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    width: 11px;
+    height: 7px;
+    margin-top: -4px;
+    background: url($arrowimg) no-repeat center / cover;
+  }
+
+  &[data-arrow="up"]:after {
+    transform: rotate(180deg);
+  }
+
+  &-popwrapper {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -142px;
+    width: 100%;
+    height: 135px;
+    padding: 7px 0;
+    background: #ffecbb;
+    border-radius: 8px;
+    z-index: 3;
+
+    ul {
+      overflow: auto;
+      height: 100%;
+      margin: 0 6px;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        box-shadow: inset 0 0 5px #E3C791;
+        background: #E3C791;
+      }
+      -webkit-overflow-scrolling: touch;
+
+      li {
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+      }
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+}

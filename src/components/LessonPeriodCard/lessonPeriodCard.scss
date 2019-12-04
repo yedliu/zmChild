@@ -1,0 +1,96 @@
+.lesson-item {
+  position: relative;
+  display: inline-block;
+  width: 161px;
+  height: 185px;
+  margin-top: 20px;
+  margin-right: 17px;
+  background: url("./image/me_card_normal@2x.png") no-repeat center;
+  background-size: cover;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  &:last-child {
+    clear: both;
+  }
+  &.vip {
+    background: url("./image/me_card_vip@2x.png") no-repeat center;
+    background-size: cover;
+  }
+  &.special {
+    background: url("image/me_card_special@2x.png") no-repeat center;
+    background-size: cover;
+  }
+  &.famous {
+    background: url("./image/me_card_famous@2x.png") no-repeat center;
+    background-size: cover;
+  }
+  .course-title {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  .course-info {
+    position: absolute;
+    height: 140px;
+    top: 40px;
+    width: 100%;
+    color: #333333;
+    .content {
+      font-size: 14px;
+      color: #999999;
+      text-align: center;
+      margin: 8px 0 4px 0;
+    }
+    .total {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .desc {
+      text-align: center;
+      font-size: 12px;
+    }
+    .freeze {
+      position: relative;
+      height: 28px;
+      line-height: 28px;
+      width: 100px;
+      margin: 5px auto;
+      font-size: 12px;
+      background-color: #ffdede;
+      color: #ff6969;
+      border-radius: 15px;
+      text-align: center;
+      .freeze-alert {
+        position: absolute;
+        top: -10px;
+        left: 85px;
+        z-index: 999;
+        background: url("./image/img-freeze-bg@2x.png") center no-repeat;
+        background-size: 100% 100%;
+        padding: 15px 15px 20px 30px;
+        min-width: 200px;
+        text-align: left;
+        color: #333333;
+        .freeze-alert-title {
+          font-size: 16px;
+        }
+        .freeze-alert-list {
+          font-size: 12px;
+          line-height: 12px;
+          margin-top: 5px;
+          word-break: keep-all;
+          white-space:nowrap;
+        }
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+#centerContainer {
+  .detail-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+  }
+  .detail-box {
+    width: 544px;
+    height: 492px;
+    margin: 0 auto;
+    background-color: #6988FF;
+    border-radius: 30px;
+    position: relative;
+    padding: 18px 18px 12px 18px;
+    display: flex;
+    flex-direction: column;
+    .close-btn {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      right: -5px;
+      top: -10px;
+      background: url("../../statics/common/image/schedule_icon_close@2x.png") no-repeat center;
+      background-size: cover;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    .title {
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .detail-type {
+      margin-top: 10px;
+      height: 40px;
+      .type-item {
+        background-color: #DCE3FF;
+        border-radius: 16px 16px 0 0;
+        height: 40px;
+        width: 144px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #6988FF;
+        text-align: center;
+        float: left;
+        &.active {
+          background-color: #ffffff;
+        }
+      }
+    }
+    .details-main {
+      flex: 1;
+      width: 522px;
+      //background-color: #ffffff;
+      //border-radius: 0 20px 20px 20px;
+      //padding: 10px 20px;
+      position: relative;
+      .detail-main-bg {
+        position: absolute;
+        width: 510px;
+        height: 100%;
+        background-color: #ffffff;
+        border-radius: 0 20px 20px 20px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .details-main-list {
+        z-index: 2;
+        position: absolute;
+        width: 522px;
+        height: 100%;
+        border-radius: 0 20px 20px 20px;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+      }
+      .detail-item {
+        width: 482px;
+        height: 60px;
+        border-bottom: 1px solid #eeeeee;
+        position: relative;
+        z-index: 99;
+        margin-left: 15px;
+        .description {
+          margin: 20px 0 5px 0;
+          line-height: 20px;
+          font-size: 14px;
+          text-align: left;
+          color: #333333;
+          .counts {
+            float: right;
+          }
+          &.consume {
+            margin-left: -5px;
+          }
+        }
+        .time {
+          color: #999999;
+          font-size: 14px;
+          line-height: 18px;
+          .content {
+            float: right;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

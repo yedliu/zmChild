@@ -1,0 +1,192 @@
+.fill-box-wrapper {
+  position: relative;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.content {
+  user-select: none;
+  font-size: 14px;
+}
+
+.content > p {
+  text-indent: 2em;
+}
+
+zmFill {
+  width: 2em;
+  height: 28px;
+  line-height: 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+  border: 1px solid red;
+  box-sizing: border-box;
+  text-indent: 0;
+  box-sizing: border-box;
+}
+
+zmFill > span {
+  height: 24px;
+  line-height: 24px;
+}
+
+zmFill.filled {
+  width: auto;
+}
+
+zmFill.hover {
+  background: red;
+}
+
+.optionPoll > span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+
+.optionPoll > span.picked {
+  opacity: 0.48;
+}
+
+.fillContainer > p {
+  line-height: 28px;
+  text-indent: 2em;
+}
+
+.fillContainer zmFill {
+  width: 40px;
+  height: 22px;
+  display: inline-block;
+  background: #FFF6BD;
+  border: 1px dashed #FF9E00;
+  border-radius: 4px;
+  margin: auto 4px;
+}
+
+.fillContainer zmFill::after {
+  content: '+';
+  color: #FF9F00;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: normal;
+}
+
+.fillContainer zmFill.filled {
+  width: auto;
+  background: #EEFAFF;
+  border: 1px solid #46ACDE;
+  border-radius: 4px;
+  color: #2279A4;
+  height: 22px;
+  line-height: normal;
+}
+
+.fillContainer zmFill.filled > span {
+  display: inline-block;
+  width: 1.3em;
+  font-size: 14px;
+  text-align: center;
+  color: red;
+}
+
+.fillContainer zmFill.filled::after {
+  display: none;
+}
+
+.fillContainer zmFill.right {
+  color: #388D11;
+  border-color: #388D11;
+}
+
+.fillContainer zmFill.right > span {
+  display: none;
+}
+
+.fillContainer zmFill.wrong {
+  color: #EF4C4F;
+  border-color: #EF4C4F;
+  background: rgba(239,76,79,0.24);
+  border-style: solid;
+  position: relative;
+}
+
+.fillContainer zmFill.wrong > span {
+  position: absolute;
+  color: transparent;
+  width: 20px;
+  height: 20px;
+  right: -8px;
+  bottom: -8px;
+  background-image: url("./images/wrong1@2x.png");
+  background-size: 20px;
+  animation: animation1 .8s ease-out;
+}
+
+@keyframes animation1 {
+  0%{
+   transform:scale(0)
+  }
+  33%{
+   transform:scale(1.2)
+  }
+  66%{
+   transform:scale(.8)
+  }
+  100%{
+   transform:scale(1)
+  }
+}
+
+.fillContainer zmFill.hover {
+  background: #BDDCFF;
+  border: 1px dashed #46ACDE;
+  border-radius: 4px;
+  transform: scale(1.3);
+}
+
+.fillContainer zmFill.hover::after {
+  color: #46ACDE;
+}
+
+.optionPoll {
+  height:320px;
+  padding:32px;
+  margin:0 auto;
+  margin-top:15px;
+  background:url("./images/yongchi@2x.png") no-repeat;
+  background-size:100% 100%;
+}
+
+.optionPoll > span {
+  height: 30px;
+  margin: 0 16px;
+  background: #FFFFFF;
+  border: 1px solid #46ACDE;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #2279A4;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.optionPoll > span.active {
+  background: #FFFFFF;
+  border: 2px solid #46ACDE;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.20);
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+.optionPoll > span.picked {
+  opacity: 0.48;
+  display: none;
+}

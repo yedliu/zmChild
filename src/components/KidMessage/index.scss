@@ -1,0 +1,63 @@
+.kid-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  min-width: 298px;
+  height: 76px;
+  padding: 0 40px;
+  font-size: 18px;
+  font-family: HYZhengYuan;
+  text-align: center;
+  border: 10px solid rgba(96,134,255,1);
+  border-radius: 19px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -62px;
+    left: -78px;
+    width: 135px;
+    height: 135px;
+  }
+
+  &.default::before {
+    background: url('../../statics/common/image/log_toast_fox@2x.png') no-repeat center / cover;
+  }
+
+  &.errorpartner1::before {
+    background: url('../../statics/common/image/log_toast_fox@2x.png') no-repeat center / cover;
+  }
+
+  &.errorpartner2::before {
+    background: url('../../statics/common/image/toast_rabbit_sad.png') no-repeat center / cover;
+  }
+
+  &.errorpartner3::before {
+    background: url('../../statics/common/image/toast_panda_sad.png') no-repeat center / cover;
+  }
+
+  &.successpartner1::before {
+    background: url('../../statics/common/image/log_toast_fox_hi@2x.png') no-repeat center / cover;
+  }
+  &.error::before {
+    background: url('../../statics/common/image/log_toast_fox@2x.png') no-repeat center / cover;
+  }
+
+  &.success::before {
+    background: url('../../statics/common/image/log_toast_fox_hi@2x.png') no-repeat center / cover;
+  }
+
+  &.successpartner2::before {
+    background: url('../../statics/common/image/toast_rabbit_happy.png') no-repeat center / cover;
+  }
+
+  &.successpartner3::before {
+    background: url('../../statics/common/image/toast_panda_happy.png') no-repeat center / cover;
+  }
+}

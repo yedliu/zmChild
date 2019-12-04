@@ -1,0 +1,117 @@
+@mixin hover {
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: brightness(90%);
+    transition: transform .2s linear;
+  }
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+  100%{
+    opacity: 0
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin FlexRow {
+  display:flex;
+  flex-direction: row;
+}
+@mixin FlexCol{
+  display: flex;
+  flex-direction:column;
+}
+@keyframes flowUpDown{
+  0%{
+    transform:translateY(0)
+  }
+  25%{
+    transform:translateY(-5px)
+  }
+  50%{
+    transform:translateY(0)
+  }
+  75%{
+    transform:translateY(5px)
+  }
+  100%{
+    transform:translateY(0)
+  }
+}
+@mixin HoverFinger {
+  &:hover {
+    cursor: url("/src/statics/common/image/mouse_img_selected.png"), default;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin DefaultBtn($height) {
+  box-sizing: border-box;
+  border-radius: ($height / 2);
+  position: relative;
+  line-height: $height;
+  &:before {
+    position: absolute;
+    right: ($height / 4);
+    top: 2px;
+    content: '';
+    width: 4px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: rotate(-53deg);
+  }
+}
+
+@mixin DefaultRedBtn($height) {
+  background-color: #FF5E65;
+  border-bottom: 5px #F74951 solid;
+  @include DefaultBtn($height);
+}
+
+@mixin DefaultYellowBtn($height) {
+  background-color: #FFC935;
+  border-bottom: 5px #FFB600 solid;
+  @include DefaultBtn($height);
+}
+
+@mixin DefaultGrayBtn($height) {
+  background-color: #CBCBD6;
+  border-bottom: 5px #BDBDC7 solid;
+  @include DefaultBtn($height);
+}
+
+@mixin DefaultBlueBtn($height) {
+  background-color: #6C8EF8;
+  border-bottom: 5px #4065DB solid;
+  @include DefaultBtn($height);
+}

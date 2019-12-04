@@ -1,0 +1,195 @@
+@import '../../base.scss';
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  } 
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.PreViewZmlDocWrap {
+  width:100%;
+  height:100%;
+  text-align:left;
+  background-color:white;
+}
+
+.PreViewZmlDoc {
+  height: 100%;
+  background: #FFF9EF;
+  font-size: 14px;
+  .elementItem{
+    position:absolute;
+  }
+  overflow: hidden;
+  transform-origin: left top;
+}
+
+.BodyWrapper {
+  @include FlexCol;
+  min-height:100%;
+  .example-enter {
+    opacity: 0.01;
+  }
+
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .example-leave {
+    opacity: 1;
+  }
+
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+.BoardWrapper {
+  @include FlexRow;
+  justify-content:center;
+  .answer-enter {
+    opacity: 0.01;
+  }
+
+  .answer-enter.answer-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .answer-leave {
+    opacity: 1;
+  }
+
+  .answer-leave.answer-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+.BoardRight {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:800px;
+  height:570px;
+  background: url('./images/vedio_img_ppt.png') no-repeat;
+  background-size: 100% 100%;
+  // padding-left:23.6px;
+  .bottom-img{
+    position:absolute;
+    bottom:0
+  }
+  .left{
+    width:134px;
+    height:143px;
+    left:-117px;
+    bottom:20px;
+  }
+  .right{
+    width:124px;
+    height:199px;
+    right:-108px;
+  }
+}
+
+.BoardContent {
+  @include FlexCol;
+  height: 100%;
+  // width: 678px;
+  // height:511px;
+  // background: url('./images/vedio_img_ppt.png') no-repeat;
+  // background-size: cover;
+  // padding:30px 27px 27px 26px;
+  // background:rgba(70,108,228,1);
+  border-radius:32px;
+  // border:22px solid rgba(109,143,255,1);
+  // overflow-y:auto;
+  text-align:center;
+  .img{
+    width: 744px;
+    height:419px;
+    margin-top:27px;
+    .kimg{
+       width:800px;
+     }
+  }
+}
+
+.ControlButton {
+  @include FlexRow;
+  justify-content:center;
+  align-items:center;
+  background:#466CE4;
+  border-radius:32px;
+  flex-shrink:0;
+  flex-grow:0;
+  height:60px;
+  margin-top: 4px;
+  .ctr-btn{
+    width:40px;
+    height:40px;
+    background-size:100%;
+    @include hover;
+    @include HoverFinger;
+  }
+  .pre{
+    background:url('./images/history_btn_left_grey.png') no-repeat;
+    background-size: cover;
+
+  }
+  .red {
+    background:url('./images/history_btn_left_red.png') no-repeat;
+    background-size: cover;
+  }
+  .gray {
+    background:url('./images/history_btn_right_grey.png') no-repeat;
+    background-size: cover;
+  }
+  .next{
+    background:url('./images/history_btn_right_red.png') no-repeat;
+    background-size: cover;
+  }
+  div.count{
+    width:74px;
+    height:31px;
+    line-height: 31px;
+    margin: 0 27px;
+    background:rgba(0,0,0,.3);
+    border-radius:16px;
+    font-size:16px;
+    color: #fff;
+  }
+}
+
+.Toast {
+  opacity: 0;
+  min-width: 167px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  padding: 10px 20px;
+  display: inline;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeOut 5s linear 1s; 
+}

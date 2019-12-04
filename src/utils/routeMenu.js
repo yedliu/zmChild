@@ -1,0 +1,186 @@
+export const menuGlobal = [
+  {
+    id: 'login',
+    path: '/',
+    models: () => [import('../pages/Login/model')],
+    component: () => import('../pages/Login/index'),
+  },
+  {
+    id: 'kidhomepage',
+    path: '/kid',
+    models: () => [import('../pages/KidHomePage/model'), import('../components/KidAppointment/model')],
+    component: () => import('../pages/KidHomePage/index'),
+  },
+  {
+    id: 'kidhistory',
+    path: '/kid/kidhistory',
+    models: () => [import('../pages/KidHistory/model')],
+    component: () => import('../pages/KidHistory'),
+  },
+  {
+    id: 'kidhomework',
+    path: '/kid/kidhomework',
+    models: () => [import('../pages/KidHomeWork/model')],
+    component: () => import('../pages/KidHomeWork'),
+  },
+  {
+    id: 'test',
+    path: '/kid/test',
+    models: () => [import('../pages/test/model')],
+    component: () => import('../pages/test'),
+  },
+  {
+    id: 'kidPersonalCenter',
+    path: '/kid/personal',
+    models: () => [import('../pages/kidPersonalCenter/model')],
+    component: () => import('../pages/kidPersonalCenter/index'),
+  },
+  {
+    id: 'kidMessageCenter',
+    path: '/kid/message',
+    models: () => [import('../pages/kidMessageCenter/model')],
+    component: () => import('../pages/kidMessageCenter/index'),
+  },
+  {
+    id: 'kidAbilityTest',
+    path: '/kid/ability/test*',
+    models: () => [import('../pages/kidAbilityTest/model')],
+    component: () => import('../pages/kidAbilityTest/index'),
+  },
+  {
+    id: 'kidAbilityReport',
+    path: '/kid/ability/report',
+    models: () => [import('../pages/kidAbilityReport/model'), import('../components/KidAppointment/model')],
+    component: () => import('../pages/kidAbilityReport/index'),
+  },
+  {
+    id: 'kidLearningAbility',
+    path: '/kid/learningAbility',
+    models: () => [import('../pages/kidLearningAbility/model'), import('../pages/kidAbilityTest/model'), import('../pages/kidAbilityReport/model'), import('../components/KidAppointment/model')],
+    component: () => import('../pages/kidLearningAbility/index'),
+  },
+  {
+    id: 'kidPadPersonalAbilityReport',
+    path: '/kid/personalCenter/report',
+    models: () => [import('../pages/kidPadPersonalAbilityReport/model')],
+    component: () => import('../pages/kidPadPersonalAbilityReport/index'),
+  },
+  {
+    id: 'kidcoursecalendar',
+    path: '/kidcoursecalendar',
+    models: () => [import('../pages/kidCourseCalendar/model')],
+    component: () => import('../pages/kidCourseCalendar/index'),
+  },
+  {
+    id: 'kidKnows',
+    path: '/kid/kidKnows',
+    component: () => import('../pages/kidKnows'),
+  },
+  {
+    id: 'kidhistoryvideo',
+    path: '/kid/kidhistoryvideo',
+    models: () => [import('../pages/KidHistoryVideo/model')],
+    component: () => import('../pages/KidHistoryVideo'),
+  },
+  {
+    id: 'kidcourseware',
+    path: '/kid/kidcourseware',
+    models: () => [import('../pages/KidCourseware/model')],
+    component: () => import('../pages/KidCourseware'),
+  },
+  {
+    id: 'kiddevicetest',
+    path: '/kid/kiddevicetest',
+    models: () => [import('../pages/KidDeviceTest/model')],
+    component: () => import('../pages/KidDeviceTest'),
+  },
+  {
+    id: 'kidProfileComplete',
+    path: '/kid/kidprofilecomplete',
+    models: () => [import('../pages/KidProfileComplete/model')],
+    component: () => import('../pages/KidProfileComplete'),
+  },
+  {
+    id: 'kidSettings',
+    path: '/kid/settings',
+    models: () => [import('../pages/KidSettings/model')],
+    component: () => import('../pages/KidSettings'),
+  },
+  {
+    id: 'ModifyPass',
+    path: '/kid/modifypass',
+    models: () => [import('../pages/KidSettings/model')],
+    component: () => import('../pages/KidSettings/ModifyPass'),
+  },
+  {
+    id: 'networkError',
+    path: '/kid/networkerror',
+    component: () => import('../pages/networkError'),
+  },
+  {
+    id: 'kidmindLesson',
+    path: '/kid/kidmindlesson',
+    models: () => [import('../pages/KidMindLesson/model')],
+    component: () => import('../pages/KidMindLesson'),
+  },
+  {
+    id: 'kidDownPage',
+    path: '/kid/kiddownpage',
+    model: () => [import('../pages/KidDownPage/model')],
+    component: () => import('../pages/KidDownPage'),
+  },
+  {
+    id: 'kidcourseeport',
+    path: '/kid/kidcoursereport',
+    models: () => [import('../pages/KidCourseReport/model')],
+    component: () => import('../pages/KidCourseReport'),
+  },
+  {
+    id: 'kidFriends',
+    path: '/kid/kidFriends',
+    models: () => [import('../pages/KidFriends/model')],
+    component: () => import('../pages/KidFriends'),
+  },
+  {
+    id: 'KidHomework2',
+    path: '/kid/kidHomework2',
+    models: () => [import('../pages/KidHomework2/model')],
+    component: () => import('../pages/KidHomework2'),
+  },
+  {
+    id: 'kidDownPartner',
+    path: '/kid/kiddownpartner',
+    models: () => [import('../pages/KidDownPartner/model')],
+    component: () => import('../pages/KidDownPartner')
+  },
+  {
+    id:'PhaseTest',
+    path: '/kid/phasetest',
+    models:()=>[import('../pages/kidPersonalCenter/phasetest/model')],
+    component:()=>import('../pages/kidPersonalCenter/phasetest/phasetest')
+  },
+  {
+    id: 'kiddrivingcenter',
+    path: '/kid/kiddrivingcenter',
+    models: () => [import('../pages/KidDrivingCenter/model')],
+    component: () => import('../pages/KidDrivingCenter'),
+  },
+  {
+    id: 'kidpracticecenter',
+    path: '/kid/kidpracticecenter',
+    models: () => [import('../pages/KidPracticeCenter/model')],
+    component: () => import('../pages/KidPracticeCenter'),
+  },
+  {
+    id: 'kidcarddetails',
+    path: '/kid/kidcarddetails',
+    models: () => [import('../pages/KidCardDetails/model')],
+    component: () => import('../pages/KidCardDetails'),
+  },
+  {
+    id: 'notFind',
+    path: '*',
+    models: () => [import('../pages/NotFind/model')],
+    component: () => import('../pages/NotFind'),
+  }
+];

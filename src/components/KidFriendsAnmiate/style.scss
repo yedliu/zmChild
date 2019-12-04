@@ -1,0 +1,60 @@
+@import '../../base.scss';
+@keyframes friuteAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(0%,0%);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: scale(1.5) translate(0%,0%);
+  }
+
+  100% {
+      opacity: 0;
+      -webkit-transform-origin: 50% 0%;
+      -webkit-transform: scale(1) translate(0%,-100%);
+  }
+}
+.friends-animate-box {
+  // @include hover;
+  @include HoverFinger;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  position: relative;
+  .friends {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    width: 200px;
+    height: 200px;
+  }
+  .friute-box {
+    width: 32px;
+    height: 36px;
+    color:rgba(255,234,84,1);
+    font-size:22px;
+    text-shadow:0px 2px 4px rgba(92,92,92,1);
+    position: absolute;
+    top: 0;
+    left: 45%;
+    display: flex;
+    align-items: center;
+    animation:friuteAnimation 2.5s infinite;
+    transition: transform 2.5s linear 0s;
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 32px;
+      height: 36px;
+      position: absolute;
+      top: 0;
+      left: -35px;
+      background: url('./images/img_magicfruit.png') no-repeat;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import '../../base.scss';
+@import '../../svgcss/homeworkbg.scss';
+#KidHomework {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url($homework-bg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  .homeworkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    .homeWraper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .question-bg {
+        width: 800px;
+        height: 586px;
+        background: url('./images/homework_img_report_big.png') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+
+#question-modal {
+  width: 378px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius:24px;
+  border:12px solid rgba(96,134,255,1);
+  background: #fff;
+
+  .ellipse {
+    width: 55px;
+    height: 12px;
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    background: url('../../statics/common/image/img_qipao.png') no-repeat;
+    background-size: 100% auto
+  }
+
+  .title {
+    font-size:18px;
+    font-family:HYZhengYuan;
+    color:rgba(0,0,0,0.82);
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    div {
+      font-size: 16px;
+      font-family: HYZhengYuan;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // cursor: pointer;
+      @include HoverFinger;
+    }
+
+    .button {
+      width: 170px;
+      height: 45px;
+      @include DefaultRedBtn(45px);
+    }
+
+    .button1 {
+      width: 120px;
+      height: 45px;
+      @include DefaultRedBtn(45px);
+    }
+
+    .button2 {
+      width: 120px;
+      height: 45px;
+      @include DefaultYellowBtn(45px);
+    }
+  }
+}

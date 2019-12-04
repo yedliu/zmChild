@@ -1,0 +1,214 @@
+@import '../../base.scss';
+
+#top-header {
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  background:rgba(0,0,0,.3);
+  // background-color: transparent;
+  padding: 0 20px;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 10000;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 14px;
+      height: 14px;
+      background: url('./images/logo.png') no-repeat;
+      background-size: cover;
+    }
+
+    .text {
+      font-size:12px;
+      font-family: HYZhengYuan;
+      color: #fff;
+      margin-left: 5px;
+    }
+  }
+
+  .header-right {
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-items: center;
+    div {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .small {
+      background: url('./images/icon_small.png') no-repeat;
+      background-size: cover;
+      &:hover {
+        background: url('./images/icon_small_hovercopy.png') no-repeat;
+        background-size: cover;
+      }
+    }
+    .big {
+      margin: 0 15px;
+      background: url('./images/icon_big.png') no-repeat;
+      background-size: cover;
+      &:hover {
+        background: url('./images/icon_big_hovercopy.png') no-repeat;
+        background-size: cover;
+      }
+    }
+    .close {
+      background: url('./images/icon_close.png') no-repeat;
+      background-size: cover;
+      &:hover {
+        background: url('./images/icon_close_hovercopy.png') no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+#quit {
+  width:378px;
+  height:220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background:#fff;
+  border-radius:24px;
+  border:12px solid rgba(96,134,255,1);
+
+  .ellipse {
+    width: 55px;
+    height: 12px;
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    background: url('../../statics/common/image/img_qipao.png') no-repeat;
+    background-size: 100% auto;
+  }
+
+  .title {
+    font-size:18px;
+    font-family:HYZhengYuan;
+    color:rgba(0,0,0,0.82);
+  }
+
+  .buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    div {
+      @include flexCenter;
+      @include hover;
+      @include HoverFinger;
+      width: 120px;
+      // height: 45px;
+      font-size: 16px;
+      color: #fff;
+      font-family:HYZhengYuan;
+    }
+    .yes{
+      @include DefaultRedBtn(40px);
+    }
+    .no{
+      @include DefaultYellowBtn(40px);
+    }
+  }
+}
+
+.mac-header {
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 0 8px;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 14px;
+      height: 14px;
+      background: url('./images/logo.png') no-repeat;
+      background-size: cover;
+    }
+
+    .text {
+      font-size:12px;
+      font-family: HYZhengYuan;
+      color: #fff;
+      margin-left: 5px;
+    }
+  }
+
+  .header-right {
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .small{
+        background-image: url('./images/icon／systemmenu_min@2x.png');
+        background-size: cover;
+      }
+      .big {
+        background-image: url('./images/icon／systemmenu_shrink@2x.png');
+        background-size: cover;
+      }
+      .big-s {
+        background-image: url('./images/icon／systemmenu_full@2x.png');
+        background-size: cover;
+      }
+      .close {
+        background-image: url('./images/icon／systemmenu_close@2x.png');
+        background-size: cover;
+      }
+    }
+    .small,.big,.big-s,.close {
+      border-radius: 50%;
+      height: 12px;
+      width: 12px;
+      background: none;
+    }
+    .small {
+      margin: 0 8px;
+      background-color: rgba(230,192,41,1);
+    }
+    .big {
+      margin: 0;
+      background-color: rgba(83,194,43,1);
+    }
+    .big-s {
+      margin: 0;
+      background-color: rgba(83,194,43,1);
+    }
+    .close {
+      background-color: rgba(255,90,82,1);
+    }
+  }
+
+  .header-null {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}

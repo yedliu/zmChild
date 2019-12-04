@@ -1,0 +1,109 @@
+@import '../../base.scss';
+@import '../../svgcss/setbg.scss';
+#kidcourseware {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url($set-bg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  .dropdown-box {
+    width:400px;
+    height:56px;
+    background:rgba(0,0,0,.3);
+    border-radius:30px;
+    // opacity:0.3;
+  }
+
+  .check-btn {
+    width: 50px;
+    height: 50px;
+    background: url('./images/history_btn_filtrate.png') no-repeat;
+    background-size: cover;
+    @include HoverFinger;
+    @include hover;
+  }
+
+  .courseWrapper {
+    width: 100%;
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:center;
+    background-size:cover;
+    background-position:center;
+    height:100%;
+    padding-bottom: 50px;
+  }
+
+  .courseWrapper-center {
+    justify-content:center;
+  }
+
+  .right-box {
+    position: relative;
+  }
+
+  .slect-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 261px;
+    height: 159px;
+    background: url('./images/history_img_courseware.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 99;
+    left: -200px;
+    .class-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width:205px;
+      height:39px;
+      padding-left: 20px;
+      border-radius:20px;
+      font-size:14px;
+      font-family:HYe4gj;
+      color:rgba(51,51,51,1);
+      font-family: HYCuYuanJ;
+      @include HoverFinger;
+    }
+
+    .active {
+      color:rgba(254,111,111,1);
+      background:rgba(255,240,240,1);
+    }
+
+    .select-gou {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
+      background: url('../../statics/common/image/history_icon_choose.png') no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  .no-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .pic-miss {
+      width: 230px;
+      height: 230px;
+      background: url('../../statics/common/image/img_default_miss.png') no-repeat;
+      background-size: cover;
+    }
+
+    .no-text {
+      font-size:18px;
+      font-family:HYZhengYuan;
+      color: #fff;
+    }
+  }
+}
